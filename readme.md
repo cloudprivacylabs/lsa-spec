@@ -37,7 +37,7 @@ contains a node with schema information, and another node with
 information about the data object that is being defined by the
 schema. This can be represented as follows:
 
-![Minimal layered schema](/imgs/minimal-layered-schema.png)
+![Minimal layered schema](imgs/minimal-layered-schema.png)
 
 ```
 {
