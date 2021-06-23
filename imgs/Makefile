@@ -1,4 +1,4 @@
 %.png : %.dot
-	dot -o $@ $<
+	dot -Tpng -o $@ $<
 
 minimal-layered-schema.png: 
