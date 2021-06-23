@@ -1,0 +1,21 @@
+digraph g {
+	graph [bb="0,0,549,47",
+		rankdir=LR
+	];
+	node [label="\N"];
+	schemaRoot	[height=0.65278,
+		label="schemaId | @type=ls:Schema",
+		pos="72.5,23.5",
+		rects="0,23.5,145,46.5 0,0.5,145,23.5",
+		shape=record,
+		width=2.0139];
+	layerRoot	[height=0.51389,
+		label="type=[ls:Attribute, ls:Object, ls:NewObject]",
+		pos="390.5,23.5",
+		rects="232,5.5,549,41.5",
+		shape=record,
+		width=4.4028];
+	schemaRoot -> layerRoot	[label="ls:layer",
+		lp="188.5,31",
+		pos="e,231.99,23.5 145.21,23.5 168.21,23.5 194.75,23.5 221.66,23.5"];
+}

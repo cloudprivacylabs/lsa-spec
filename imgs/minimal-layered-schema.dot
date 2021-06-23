@@ -1,0 +1,8 @@
+digraph g {
+  rankdir = "LR";
+
+  schemaRoot [ shape = "record", label="schemaId | @type=ls:Schema"];
+  layerRoot [ shape = "record", label="type=[ls:Attribute, ls:Object, ls:NewObject]"];
+
+  schemaRoot -> layerRoot [ label="ls:layer" ];
+}

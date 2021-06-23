@@ -1,10 +1,43 @@
 # Layered Schemas
 
+## Introduction
 
-## Schemas and Overlays
+A schema describes the shape of data. This is usually done by defining
+the structure of a valid data object and using constraints such as
+format, type, min-max values, etc. A data object that conforms to the
+schema is an *instance* of that schema. When a data object is
+validated using a schema, that object can be processed with certain
+guarantees. However, in general, schemas are limited in their
+expressiveness. Non-standard constraints or additional semantic
+information cannot be added in a standard way. For instance, there is
+no standard way to flag certain fields as "personally identifiable
+information" in a JSON schema, The first problem solved by a layered
+schema is the ability to assign open-ended semantic information to
+data elements.
 
-A layer can either be a `Schema` or an `Overlay`. A layer has the
-following structure:
+The second problem is related to how data objects are represented. A
+JSON schema describes a JSON document. To process an XML document, an
+XML schema is needed. Layered schemas can be used to validate and
+ingest JSON, XML, CSV, or any other type of structured data. This is
+because a layered schema defines data elements as a labeled property
+graph. The same schema can be used to translate and validate a JSON
+document to a LGP as well as an XML document. The translation is
+directed using the semantic information embedded into the schema that
+is used to direct the translation process.
+
+Finally, a layered schema has a schema base and layers (overlays) that
+modify the information of the base. These layers can be used to add or
+modify constraints, semantic tags, processing directives based on the
+use case, locale, implementation, etc.
+
+## Basic Concepts
+
+A layered schema is a labeled property graph. A minimal layered schema
+contains a node with schema information, and another node with
+information about the data object that is being defined by the
+schema. This can be represented as follows:
+
+![Minimal layered schema](/imgs/minimal-layered-schema.png)
 
 ```
 {
