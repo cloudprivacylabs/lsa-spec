@@ -1,4 +1,4 @@
-%.png : %.dot
-	dot -Tpng -o $@ $<
+%.svg : %.dot
+	dot -Tsvg -o $@ $<
 
-minimal-layered-schema.png: 
+minimal-layered-schema.svg: 
