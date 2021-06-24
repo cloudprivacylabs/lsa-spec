@@ -1,4 +1,5 @@
 %.svg : %.dot
 	dot -Tsvg -o $@ $<
 
-minimal-layered-schema.svg: 
+.PHONY: all
+all: minimal-layered-schema.svg composed-minimal-layered-schema.svg

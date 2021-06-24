@@ -82,6 +82,64 @@ elements of `attributes` have type `Attribute`, so the type definition
 for `Attribute` can be omitted. Similarly, any object containing
 `attributes` is an `Object`, so it can be omitted as well.
 
+An `Overlay` can be used to assign additional information to this
+schema. For instance, the following overlay defined JSON keys and
+types for the attributes:
+
+```
+{
+  "@context": "https://lschema.org/ls.jsonld",
+  "@type": "Overlay",
+  "@id": "overlayId",
+  "layer": {
+    "@id": "layerId",
+    "@type": ["Attribute", "Object", "https://example.org/SomeObject"],
+    "attributes": [
+      {
+        "@id": "attr1",
+        "attributeName": "name1",
+        "attributeType": "string"
+      },
+      {
+        "@id": "attr2",
+        "attributeName": "name2",
+        "attributeType": "string"
+      }
+    ]
+  }
+}
+```
+
+When this overlay is composed with the previous schema, the resulting schema is;
+```
+{
+  "@context": "https://lschema.org/ls.jsonld",
+  "@type": "Schema",
+  "@id": "schemaId",
+  "layer": {
+    "@id": "layerId",
+    "@type": ["Attribute", "Object", "https://example.org/SomeObject"],
+    "attributes": [
+      {
+        "@id": "attr1",
+        "@type": ["Attribute", "Value"],
+        "attributeName": "name1",
+        "attributeType": "string"
+      },
+      {
+        "@id": "attr2",
+        "@type": ["Attribute", "Value"],
+        "attributeName": "name2",
+        "attributeType": "string"
+      }
+    ]
+  }
+}
+```
+
+Which is:
+
+![Composed minimal layered schema](imgs/composed-minimal-layered-schema.svg)
 
 
 ### `@context`
