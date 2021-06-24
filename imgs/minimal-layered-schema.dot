@@ -1,8 +1,33 @@
 digraph g {
-  rankdir = "LR";
 
-  schemaRoot [ shape = "record", label="schemaId | @type=ls:Schema"];
-  layerRoot [ shape = "record", label="layerId | type=[ls:Attribute, ls:Object, ls:NewObject]"];
 
-  schemaRoot -> layerRoot [ label="ls:layer" ];
+  node[color="darkgray",fontcolor="darkgray",shape="plaintext"];
+  edge[color="darkgray",fontcolor="darkgray"];
+
+  schemaRoot [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td>schemaId</td></tr>
+  <tr><td>@type=ls:Schema</td></tr>
+  </table>>];
+  
+  layerRoot [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td>layerId</td></tr>
+  <tr><td>@type=[ls:Attribute, ls:Object, https://example.org/SomeObject]</td></tr>
+  </table>>];
+
+  attribute1 [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td>attr1</td></tr>
+  <tr><td>@type=[ls:Attribute,ls:Value]</td></tr>
+  </table>>];
+  attribute2 [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td>attr2</td></tr>
+  <tr><td>@type=[ls:Attribute,ls:Value]</td></tr>
+  </table>>];
+
+  schemaRoot -> layerRoot [ label="ls:layer"];
+  layerRoot -> attribute1 [  label="ls:object#attributes"];
+  layerRoot -> attribute2 [  label="ls:object#attributes"];
 }
