@@ -1,8 +1,8 @@
 digraph g {
 
 
-  node[color="darkgray",fontcolor="darkgray",shape="plaintext"];
-  edge[color="darkgray",fontcolor="darkgray"];
+  node[color="slategray",fontcolor="slategray",shape="plaintext"];
+  edge[color="slategray",fontcolor="slategray"];
 
   schemaRoot [ label=<
   <table border="0" cellborder="1" cellspacing="0">
