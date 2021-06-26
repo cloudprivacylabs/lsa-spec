@@ -1,5 +1,10 @@
 digraph g {
+  node[color="black",fontcolor="black",shape="plaintext"];
 
+  subgraph cluster_0 {
+  label="schema";
+  style="filled";
+  color="lightgrey";
 
   node[color="black",fontcolor="black",shape="plaintext"];
   edge[color="black",fontcolor="black"];
@@ -34,4 +39,35 @@ digraph g {
   schemaRoot -> layerRoot [ label="ls:layer"];
   layerRoot -> attribute1 [  label="ls:object#attributes"];
   layerRoot -> attribute2 [  label="ls:object#attributes"];
+
+  }
+
+  subgraph cluster_1{
+  label="data";
+  style="filled";
+  color="lightgrey";
+
+   obj [label=<
+   <table border="0" cellborder="1" cellspacing="0">
+   <tr><td>obj</td></tr>
+   </table>>];
+   
+   a1 [label=<
+   <table border="0" cellborder="1" cellspacing="0">
+   <tr><td>obj.name1</td></tr>
+   <tr><td>@value=value1</td></tr>
+   </table>>];
+   a2[label=<
+   <table border="0" cellborder="1" cellspacing="0">
+   <tr><td>obj.name2</td></tr>
+   <tr><td>@value=value2</td></tr>
+   </table>>];
+
+   obj -> a1 [label="ls:data/object#attributes"];
+   obj -> a2 [label="ls:data/object#attributes"];
+
+   obj -> layerRoot [label="ls:data#instanceOf"];
+   a1 -> attribute1 [label="ls:data#instanceOf"];
+   a2 -> attribute2 [label="ls:data#instanceOf"];
+  }
 }

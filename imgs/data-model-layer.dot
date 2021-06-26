@@ -1,0 +1,19 @@
+digraph g {
+
+  node[color="black",fontcolor="black",shape="plaintext"];
+  edge[color="black",fontcolor="black"];
+
+  schemaRoot [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td>layerId</td></tr>
+  <tr><td>@type=https://lschema.org/Schema<br/>
+  <i>layer metadata</i></td></tr>
+  </table>>];
+  
+  layerRoot [ label=<
+  <table border="0" cellborder="1" cellspacing="0">
+  <tr><td><i>layer specification</i></td></tr>
+  </table>>];
+
+  schemaRoot -> layerRoot [ label="ls:layer"];
+}
