@@ -12,17 +12,19 @@ follows:
 
 The first node of the schema has the identifier `schemaId`, which is
 also the unique identifier of the schema. The type of the node is
-`https://lschema.org/Schema`. This node is connected to the `layerId`
-node using `ls:layer`. That means, the `layerId` node defines a layer,
-and since the source node is of type `ls:Schema`, this is a schema
+`https://lschema.org/Schema`. The `targetType` is defined to be
+`https://example.org/SomeObject`, which is the type of the object
+defined by this schema. This node is connected to the `layerId` node
+using `ls:layer`. That means, the `layerId` node defines a layer, and
+since the source node is of type `ls:Schema`, this is a schema
 layer. The layer is of type `ls:Object`, `ls:Attribute`, and
-`https://example.org/SomeObject`. This means that the defined object is a
-schema attribute, as well as an object (a set of key-value pairs). The
-`https://example.org/SomeObject` is the object that is defined by this
-schema. This schema has two attributes, `attr1` and `attr2`, both of
-which are defined as `ls:Value`, meaning the these attributes are a
-sequence of bytes, and can be strings, integers, etc. At this point,
-the schema does not define what type of data these attributes are.
+`https://example.org/SomeObject`. This means that the defined object
+is a schema attribute, as well as an object (a set of key-value
+pairs), and `https://example.org/SomeObject`. This schema has two
+attributes, `attr1` and `attr2`, both of which are defined as
+`ls:Value`, meaning the these attributes are a sequence of bytes, and
+can be strings, integers, etc. At this point, the schema does not
+define what type of data these attributes are.
 
 This graph can be represented as the following JSON-LD object:
 
@@ -31,6 +33,7 @@ This graph can be represented as the following JSON-LD object:
   "@context": "https://lschema.org/ls.json",
   "@type": "Schema",
   "@id": "schemaId",
+  "targetType": "https://example.org/SomeObject",
   "layer": {
     "@id": "layerId",
     "@type": ["Attribute", "Object", "https://example.org/SomeObject"],
@@ -63,6 +66,7 @@ types for the attributes:
   "@context": "https://lschema.org/ls.json",
   "@type": "Overlay",
   "@id": "overlayId",
+  "targetType": "https://example.org/SomeObject",
   "layer": {
     "@id": "layerId",
     "@type": ["Attribute", "Object", "https://example.org/SomeObject"],
@@ -88,6 +92,7 @@ When this overlay is composed with the previous schema, the resulting schema is;
   "@context": "https://lschema.org/ls.json",
   "@type": "Schema",
   "@id": "schemaId",
+  "targetType": "https://example.org/SomeObject",
   "layer": {
     "@id": "layerId",
     "@type": ["Attribute", "Object", "https://example.org/SomeObject"],

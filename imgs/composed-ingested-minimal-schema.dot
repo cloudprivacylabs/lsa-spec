@@ -12,7 +12,8 @@ digraph g {
   schemaRoot [ label=<
   <table border="0" cellborder="1" cellspacing="0">
   <tr><td>schemaId</td></tr>
-  <tr><td>@type=ls:Schema</td></tr>
+  <tr><td>@type=ls:Schema<br/>
+  ls:targetType=https://example.org/SomeObject</td></tr>
   </table>>];
   
   layerRoot [ label=<
