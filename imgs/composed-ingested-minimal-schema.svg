@@ -16,8 +16,8 @@
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_1</title>
-<polygon fill="lightgrey" stroke="lightgrey" points="504,-139 504,-344.5 965,-344.5 965,-139 504,-139"/>
-<text text-anchor="middle" x="734.5" y="-329.3" font-family="Times-Roman" font-size="14.00">data</text>
+<polygon fill="lightgrey" stroke="lightgrey" points="504,-139 504,-351.5 965,-351.5 965,-139 504,-139"/>
+<text text-anchor="middle" x="734.5" y="-336.3" font-family="Times-Roman" font-size="14.00">data</text>
 </g>
 <!-- schemaRoot -->
 <g id="node1" class="node">
@@ -80,15 +80,17 @@
 <!-- obj -->
 <g id="node5" class="node">
 <title>obj</title>
-<polygon fill="none" stroke="black" points="574,-284.5 574,-305.5 602,-305.5 602,-284.5 574,-284.5"/>
-<text text-anchor="start" x="577" y="-291.3" font-family="Times-Roman" font-size="14.00">obj</text>
+<polygon fill="none" stroke="black" points="521,-295.5 521,-316.5 718,-316.5 718,-295.5 521,-295.5"/>
+<text text-anchor="start" x="608.5" y="-302.3" font-family="Times-Roman" font-size="14.00">obj</text>
+<polygon fill="none" stroke="black" points="521,-274.5 521,-295.5 718,-295.5 718,-274.5 521,-274.5"/>
+<text text-anchor="start" x="524" y="-281.3" font-family="Times-Roman" font-size="14.00">@type=[ls:DocumentNode]</text>
 </g>
 <!-- obj&#45;&gt;layerRoot -->
 <g id="edge6" class="edge">
 <title>obj&#45;&gt;layerRoot</title>
-<path fill="none" stroke="black" d="M560.71,-284.55C543.36,-278.27 520.4,-270.04 500,-263 445.33,-244.12 383.61,-223.59 335.43,-207.73"/>
-<polygon fill="black" stroke="black" points="336.26,-204.32 325.67,-204.52 334.07,-210.97 336.26,-204.32"/>
-<text text-anchor="middle" x="512" y="-233.8" font-family="Times-Roman" font-size="14.00">ls:data#instanceOf</text>
+<path fill="none" stroke="black" d="M534.09,-270.38C506.86,-262.48 476.61,-253.54 449,-245 410.82,-233.19 368.69,-219.49 333.22,-207.76"/>
+<polygon fill="black" stroke="black" points="334,-204.33 323.4,-204.51 331.79,-210.98 334,-204.33"/>
+<text text-anchor="middle" x="516" y="-233.8" font-family="Times-Roman" font-size="14.00">ls:data#instanceOf</text>
 </g>
 <!-- a1 -->
 <g id="node6" class="node">
@@ -102,8 +104,8 @@
 <!-- obj&#45;&gt;a1 -->
 <g id="edge4" class="edge">
 <title>obj&#45;&gt;a1</title>
-<path fill="none" stroke="black" d="M585.87,-277.44C584.79,-264.23 584.51,-245.61 589,-230 589.85,-227.05 590.92,-224.11 592.15,-221.2"/>
-<polygon fill="black" stroke="black" points="595.34,-222.64 596.54,-212.11 589.04,-219.59 595.34,-222.64"/>
+<path fill="none" stroke="black" d="M598.63,-270.41C591.04,-258.59 585.11,-243.92 589,-230 589.83,-227.05 590.88,-224.09 592.1,-221.18"/>
+<polygon fill="black" stroke="black" points="595.29,-222.62 596.46,-212.09 588.98,-219.59 595.29,-222.62"/>
 <text text-anchor="middle" x="675.5" y="-233.8" font-family="Times-Roman" font-size="14.00">ls:data/object#attributes</text>
 </g>
 <!-- a2 -->
@@ -118,9 +120,9 @@
 <!-- obj&#45;&gt;a2 -->
 <g id="edge5" class="edge">
 <title>obj&#45;&gt;a2</title>
-<path fill="none" stroke="black" d="M615.01,-289.91C650.17,-283.25 712.91,-269.01 762,-245 776.8,-237.76 791.69,-228 804.92,-218.27"/>
-<polygon fill="black" stroke="black" points="807.04,-221.05 812.92,-212.23 802.83,-215.46 807.04,-221.05"/>
-<text text-anchor="middle" x="873.5" y="-233.8" font-family="Times-Roman" font-size="14.00">ls:data/object#attributes</text>
+<path fill="none" stroke="black" d="M702.06,-270.45C722.18,-263.36 743.27,-254.82 762,-245 776.31,-237.5 790.86,-227.83 803.89,-218.28"/>
+<polygon fill="black" stroke="black" points="806.32,-220.84 812.22,-212.04 802.12,-215.23 806.32,-220.84"/>
+<text text-anchor="middle" x="871.5" y="-233.8" font-family="Times-Roman" font-size="14.00">ls:data/object#attributes</text>
 </g>
 <!-- a1&#45;&gt;attribute1 -->
 <g id="edge7" class="edge">

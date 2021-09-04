@@ -51,6 +51,7 @@ digraph g {
    obj [label=<
    <table border="0" cellborder="1" cellspacing="0">
    <tr><td>obj</td></tr>
+   <tr><td>@type=[ls:DocumentNode]</td></tr>
    </table>>];
    
    a1 [label=<
