@@ -56,19 +56,22 @@ digraph g {
    a1 [label=<
    <table border="0" cellborder="1" cellspacing="0">
    <tr><td>obj.name1</td></tr>
-   <tr><td>@value=value1</td></tr>
+   <tr><td>@type=[ls:DocumentNode]<br/>
+   @value=value1</td></tr>
    </table>>];
+   
    a2[label=<
    <table border="0" cellborder="1" cellspacing="0">
    <tr><td>obj.name2</td></tr>
-   <tr><td>@value=value2</td></tr>
+   <tr><td>@type=[ls:DocumentNode]<br/>
+   @value=value2</td></tr>
    </table>>];
 
-   obj -> a1 [label="ls:data/object#attributes"];
-   obj -> a2 [label="ls:data/object#attributes"];
+   obj -> a1 [ label="ls:data/object#attributes"];
+   obj -> a2 [ label="ls:data/object#attributes"];
 
-   obj -> layerRoot [label="ls:data#instanceOf"];
-   a1 -> attribute1 [label="ls:data#instanceOf"];
-   a2 -> attribute2 [label="ls:data#instanceOf"];
+   obj -> layerRoot [ label="ls:data#instanceOf"];
+   a1 -> attribute1 [  label="ls:data#instanceOf"];
+   a2 -> attribute2 [ label="ls:data#instanceOf"];
   }
 }
