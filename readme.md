@@ -1,3 +1,10 @@
+**This repository is no longer active. See the layered schema
+architecture website and code repository for the latest
+developments.**
+
+  * [Layered schema architecture website](https://layeredschemas.org)
+  * [Code](https://github.com/cloudprivacylabs/lsa)
+
 # Layered Schemas
 
 ## Introduction
